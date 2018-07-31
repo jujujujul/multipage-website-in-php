@@ -1,0 +1,69 @@
+
+main{
+    background-image: url(border.png);
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: cover;
+    
+  
+}
+
+
+a:visited {
+    color: gray;
+}
+
+a.middle:visited{
+    color:crimson;
+}
+
+a:hover { 
+  font-size: 30px;
+  background: -webkit-linear-gradient(#ff5000, #0055ff, #00ff55, #FFFF00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    }
+
+#introtop {
+    font-size: 30px;
+    font-family: 'Anton', sans-serif;
+   
+}
+
+#middle{
+    font-size: 40px;
+    text-align: center;
+    color: #FFD700;
+    font-family: 'Anton', sans-serif;
+    margin:10%;
+}
+
+
+.rotate {
+writing-mode: vertical-rl;
+text-orientation: sideways;
+margin-left: 20%;
+font-size: 30px;
+margin-bottom: 10%;
+
+}
+
+@media screen and (min-width: 200px) and (max-width: 640px) {
+  #introtop {
+    font-size: 15px;
+  }
+}
+
+
+.title{
+    font-family: 'Lobster', cursive;
+}
+
+.roudou{
+    background-image: url(background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 80vw;
+    height: 50vw;
+    margin: auto;
+}
