@@ -1,13 +1,8 @@
 
 main{
-    background-image: url(border.png);
-    background-position: center;
-    background-repeat:no-repeat;
-    background-size: cover;
     color:dimgrey;
-    
-  
 }
+
 a:hover{
    font-size: 30px; 
 }
@@ -25,13 +20,11 @@ a.rotatou:hover {
   background: -webkit-linear-gradient(#ff5000, #0055ff, #00ff55, #FFFF00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
     }
 
 #introtop {
     font-size: 30px;
     font-family: 'Anton', sans-serif;
-   
 }
 
 #middle{
@@ -49,7 +42,6 @@ text-orientation: sideways;
 margin-left: 20%;
 font-size: 30px;
 margin-bottom: 10%;
-
 }
 
 @media screen and (min-width: 200px) and (max-width: 640px) {
@@ -84,6 +76,6 @@ margin-bottom: 10%;
 
 #copyright{
     text-align: center;
-    font-size: 6px;
+    font-size: 10px;
     color: darkgrey;
 }
