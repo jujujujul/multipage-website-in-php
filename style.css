@@ -4,24 +4,28 @@ main{
     background-position: center;
     background-repeat:no-repeat;
     background-size: cover;
+    color:dimgrey;
     
   
 }
+a:hover{
+   font-size: 30px; 
+}
 
+a.link:visited{
+     color: #FFD700;
+}
 
 a:visited {
     color: gray;
-}
+}  
 
-a.middle:visited{
-    color:crimson;
-}
-
-a:hover { 
+a.rotatou:hover { 
   font-size: 30px;
   background: -webkit-linear-gradient(#ff5000, #0055ff, #00ff55, #FFFF00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
     }
 
 #introtop {
@@ -66,4 +70,20 @@ margin-bottom: 10%;
     width: 80vw;
     height: 50vw;
     margin: auto;
+}
+
+.byhand{
+    font-family: 'Homemade Apple', cursive;
+    color: black;
+    font-size: 50px;
+}
+
+#bottom{
+    width: 100%;
+}
+
+#copyright{
+    text-align: center;
+    font-size: 6px;
+    color: darkgrey;
 }
