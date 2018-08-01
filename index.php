@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE HTML>
 
 <html>
@@ -34,7 +37,7 @@
         </header>
 	
         <main>
-            <p id="introtop" class="m-5">L’ASBL Les Petits Riens est une entreprise d’économie sociale dont la mission est d’accompagner les personnes en difficulté afin qu’elles gagnent de l’autonomie de façon durable.</p>
+            <p class="introtop" class="m-5">L’ASBL Les Petits Riens est une entreprise d’économie sociale dont la mission est d’accompagner les personnes en difficulté afin qu’elles gagnent de l’autonomie de façon durable.</p>
 
 
             <section class="align-content-center">
@@ -137,16 +140,21 @@
             </section>
      					    
         </main>
-        
-        <footer>  
-                 
+        <?php
+        include("footer.php");
+        ?>
+<!--
+               
+            <footer>  
+            <div>   
             <section class="bottom mt-5 mb-5">
                     <img src="background2bisbis.png" alt="" id="bottom">
             </section>	
 
             <div id="copyright" > COPYRIGHT © 2018 ALEX ET JULIE FroM BECODE  | FOR "LES PETITS RIENS RUE AMÉRICAINE, 101 1050, BRUXELLES" </div>
-            
+            </div>  
         </footer>
+-->
 
 	</body>
 </html>

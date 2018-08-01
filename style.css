@@ -22,9 +22,10 @@ a.rotatou:hover {
   -webkit-text-fill-color: transparent;
     }
 
-#introtop {
+.introtop {
     font-size: 30px;
     font-family: 'Anton', sans-serif;
+    margin-left:10%;
 }
 
 #middle{
@@ -45,7 +46,7 @@ margin-bottom: 10%;
 }
 
 @media screen and (min-width: 200px) and (max-width: 640px) {
-  #introtop {
+  .introtop {
     font-size: 15px;
   }
 }
@@ -75,7 +76,17 @@ margin-bottom: 10%;
 }
 
 #copyright{
-    text-align: center;
-    font-size: 10px;
+ 
+    font-size: 12px;
     color: darkgrey;
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+}
+
+.backgroundp2{
+   background-image: url(background3.png);
+     background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+   
 }
