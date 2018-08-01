@@ -18,26 +18,13 @@
 	</head>
 
 	<body>
-	    <header>
-            <nav class="navbar navbar-expand-lg navbar-light p-3 mb-2  text-dark navbar-fixed-top">
-                <a class="navbar-brand title" href="#">Les Petits Riens</a>
-                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                      <a class="nav-item nav-link active" href="#">Contacts <span class="sr-only">(current)</span></a>
-                      <a class="nav-item nav-link" href="#">Newsletter</a>
-                      <a class="nav-item nav-link" href="https://www.petitsriens.be/wp-content/uploads/2015/03/Charte-FR.jpg">La Charte </a>
-                    </div>
-                  </div>
-                  <div id="logo-contain"><img class="logonav rounded float-right" src="logo.png" alt="">
-                  </div>    
-            </nav>
-        </header>
+	  
 	
+       <?php include("header.php");
+       ?>
+       
         <main>
-            <p class="introtop" class="m-5">L’ASBL Les Petits Riens est une entreprise d’économie sociale dont la mission est d’accompagner les personnes en difficulté afin qu’elles gagnent de l’autonomie de façon durable.</p>
+            <p class="introtop" >L’ASBL Les Petits Riens est une entreprise d’économie sociale dont la mission est d’accompagner les personnes en difficulté afin qu’elles gagnent de l’autonomie de façon durable.</p>
 
 
             <section class="align-content-center">
@@ -107,10 +94,7 @@
                         David Saporito – Coordinateur<br>
                         Rue Américaine 101 | 1050 Bruxelles<br>
                         Tél. : 02/541.13.93 | Fax : 02/534.70.78 | GSM : 0497/470.004
-                        <div class="btn-group dropright">
-                             <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Catégories
-                             </button>
+                       
                              <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
                                  <button class="dropdown-item" type="button">Réinsertion Socioprofessionnelle</button>
                                  <button class="dropdown-item" type="button">Espace Formation Emploi (EFE)</button>
@@ -136,25 +120,20 @@
                         La principale difficulté rencontrée par les résidents est liée à la perte d’un logement suite à une rupture dans leur situation sociale ou familiale.
                         </div>
                     </div>
-                </div>
+                
             </section>
-     					    
+     			
+     		 <div>
+                <button type="button" class="btn btn-outline-warning"><a id=btn href="#">  Formulaire de contact </a> </button>
+            </div>
+           			    			    		    		    
+     					    		    		    		    		    
         </main>
+        
         <?php
         include("footer.php");
         ?>
-<!--
-               
-            <footer>  
-            <div>   
-            <section class="bottom mt-5 mb-5">
-                    <img src="background2bisbis.png" alt="" id="bottom">
-            </section>	
 
-            <div id="copyright" > COPYRIGHT © 2018 ALEX ET JULIE FroM BECODE  | FOR "LES PETITS RIENS RUE AMÉRICAINE, 101 1050, BRUXELLES" </div>
-            </div>  
-        </footer>
--->
 
 	</body>
 </html>

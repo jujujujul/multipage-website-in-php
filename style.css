@@ -15,6 +15,7 @@ a:visited {
     color: gray;
 }  
 
+
 a.rotatou:hover { 
   font-size: 30px;
   background: -webkit-linear-gradient(#ff5000, #0055ff, #00ff55, #FFFF00);
@@ -26,6 +27,14 @@ a.rotatou:hover {
     font-size: 30px;
     font-family: 'Anton', sans-serif;
     margin-left:10%;
+}
+
+.btn{
+    background-color: #8d12a5;
+    display: flex;
+    position: relative; 
+    top: -20%;
+    left:60%;
 }
 
 #middle{
@@ -71,22 +80,40 @@ margin-bottom: 10%;
     font-size: 50px;
 }
 
+.fond2{
+    margin-top: 40px;
+    height: auto;
+    background-image: url(background2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 65vw;
+    
+    
+}
 #bottom{
     width: 100%;
+    text-align: right;
 }
 
 #copyright{
- 
     font-size: 12px;
     color: darkgrey;
     writing-mode: vertical-rl;
-    text-orientation: sideways;
+    margin-left:90vw;
+    display:flex;
+    position: relative;
+    
 }
 
-.backgroundp2{
+body{
    background-image: url(background3.png);
      background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
    
+}
+
+
+a#btn:hover{
+    font-size:1em;
 }
