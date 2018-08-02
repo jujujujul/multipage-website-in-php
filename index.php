@@ -20,7 +20,7 @@
 	<body>
 	  
 	
-       <?php include("header.php");
+       <?php require("header.php");
        ?>
        
         <main>
@@ -58,13 +58,10 @@
             </section>
 
         
-            <section class="container">
-			    <div class="row" id="middle">
-					<div class="col-md-4 col-9"><a class="link" href="#"> Don en ligne </a></div>
-					<div class="col-md-4 col-9" ><a class="link" href="#"> Don en nature </a></div>
-					<div class="col-md-4 col-9" ><a class="link" href="#"> Don en temps </a></div>
-			    </div>
-	    	</section>
+           <div id="middle">
+					<a class="link" href="agir.php"> Don en ligne | Don en nature |  Don en temps </a>
+			</div>
+	    	
 		
          	<section class="container">
                 <div class="row">
@@ -75,7 +72,8 @@
                         <p><i class="far fa-address-book"></i>
                         Brigitte Buyssens –  Directrice<br>
                         Rue du Prévôt 30-32 | 1050 Bruxelles<br>
-                        Tél. : 02/541.13.97 | Fax : 02/534.09.77</p>
+                        Tél. : 02/541.13.97 |                        <hr color="yellow"> 
+ Fax : 02/534.09.77</p>
                     </div>
                     
                     <div class=" col-sm-6">
@@ -123,15 +121,12 @@
                 
             </section>
      			
-     		 <div>
-                <button type="button" class="btn btn-outline-warning"><a id=btn href="#">  Formulaire de contact </a> </button>
-            </div>
-           			    			    		    		    
+      			    		    		    
      					    		    		    		    		    
         </main>
         
         <?php
-        include("footer.php");
+        require("footer.php");
         ?>
 
 

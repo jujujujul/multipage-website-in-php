@@ -26,15 +26,13 @@ a.rotatou:hover {
 .introtop {
     font-size: 30px;
     font-family: 'Anton', sans-serif;
-    margin-left:10%;
+    margin:10%;
+    text-indent: 40px;
+    text-align: justify;
 }
 
 .btn{
     background-color: #8d12a5;
-    display: flex;
-    position: relative; 
-    top: -20%;
-    left:60%;
 }
 
 #middle{
@@ -45,6 +43,12 @@ a.rotatou:hover {
     margin:10%;
 }
 
+.bouton{
+    color: yellow;
+    font-size: 20px;
+    margin: 10%;
+    text-align: center;
+}
 
 .rotate {
 writing-mode: vertical-rl;
@@ -80,16 +84,19 @@ margin-bottom: 10%;
     font-size: 50px;
 }
 
-.fond2{
-    margin-top: 40px;
-    height: auto;
-    background-image: url(background2.png);
+.bidou{
+    background-image: url("background2.png");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 65vw;
-    
+    background-size: 90%;
+    min-height: 500px;
+}
+
+.footerright{
     
 }
+
+
 #bottom{
     width: 100%;
     text-align: right;
@@ -99,9 +106,10 @@ margin-bottom: 10%;
     font-size: 12px;
     color: darkgrey;
     writing-mode: vertical-rl;
-    margin-left:90vw;
     display:flex;
     position: relative;
+    padding-right: 30px;
+    box-sizing: border-box;
     
 }
 
@@ -113,7 +121,36 @@ body{
    
 }
 
-
+.introtop2{
+    background-color: black;
+        color:white;
+    
+}
 a#btn:hover{
     font-size:1em;
+}
+
+a{
+    color: aliceblue;
+}
+
+.para2{
+    padding: 30px 10%;
+    border-left:solid 10px #FFD700;
+    text-align: justify;
+    text-indent: 40px;
+}
+
+.jumbotron {
+background: #358CCE;
+color: #FFF;
+border-radius: 0px;
+}
+.jumbotron-sm { padding-top: 24px;
+padding-bottom: 24px; }
+.jumbotron small {
+color: #FFF;
+}
+.h1 small {
+font-size: 24px;
 }
