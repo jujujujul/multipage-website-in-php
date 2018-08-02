@@ -16,8 +16,8 @@ $mail = new PHPMailer;
 
 
 
-if (isset($_POST['submit'])) {
-  $handle = new upload($_FILES['image_field']);
+if (isset($_POST['envoi'])) {
+  $handle = new upload($_FILES['file']);
   $mail->isSMTP();
   $mail->SMTPDebug = 0;
   $mail->Host = 'smtp.gmail.com';
