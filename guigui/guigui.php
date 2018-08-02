@@ -3,9 +3,12 @@
   //Import PHPMailer classes into the global namespace
   use PHPMailer\PHPMailer\PHPMailer;
   require 'vendor/autoload.php';
+
   $doc = DOMDocument::loadHTMLFile('source/base_form.html');
   $form = $doc->getElementById('form');
   $mail = new PHPMailer;
+
+
   function breaktest($name){
     global $doc;
     $breaks = $name;

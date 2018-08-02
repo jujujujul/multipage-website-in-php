@@ -26,7 +26,7 @@ if (isset($_POST['envoi'])) {
   $mail->SMTPAuth = true;
   $log = [];
   $today = getDate();
-  if(!file_exists('pass.php')) {
+  if(!file_exists('LoginAdmin.php')) {
     $sanuser = filter_var($_POST['useremail'], FILTER_SANITIZE_EMAIL);
     $sanpassword = filter_var($_POST['gmailpassword'], FILTER_SANITIZE_STRING);
     $valuser = filter_var($sanuser, FILTER_VALIDATE_EMAIL);
@@ -47,7 +47,7 @@ if (isset($_POST['envoi'])) {
       errorMsg($id, $message, 'newnode3');
     }
   }
-  //check if valid email and non empty message
+  // Vérifier condition d'envoi : email et message non vide
   if( isset($_POST['email']) && $_POST['message'] !== '' ){
     //log time
     $log['date'] = $today['weekday'].' '.$today['mday'].'/'.$today['mon'].'/'.$today['year'].' '.$today['hours'].':'.$today['minutes'].':'.$today['seconds'];
@@ -56,13 +56,13 @@ if (isset($_POST['envoi'])) {
     $valemail = filter_var($sanemail, FILTER_VALIDATE_EMAIL);
     // sanitization message
     $sanmessage = filter_var($_POST['message'], FILTER_SANITIZE_EMAIL);
-    //check validity of entered email adress
+    //check de la validité de l'email qui a été rentré
     if($valemail == false){
       $id = 'errorEmail';
       $message = 'Veuillez entrez une adresse email valide';
       errorMsg($id, $message, 'newnode4');
     }
-    //if valid email
+    //Si l'email est valide
     else {
       $nameToUse = '';
       // check genre
@@ -79,21 +79,27 @@ if (isset($_POST['envoi'])) {
         $nameToUse .= filter_var($_POST['firstname'], FILTER_SANITIZE_STRING) . " ";
         $log['firstname'] = filter_var($_POST['firstname'], FILTER_SANITIZE_STRING);
       }
-      //set the expeditor adress and name and log the email
+      // mise en place de l'adresse de l'expéditeur + nom et login de l'email
       $mail->setFrom($valemail, $nameToUse);
       $log['email'] = $valemail;
-      //set the subject
-      $mail->Subject = $_POST['subject'];
+      //mise en place de l'objet (du message)
+      $mail->Subject = $_POST['objet'];
+
+      // les 2 lignes en dessous ne nous concernent pas : c'est en lien avec le choix du service auquel on envoit le mail
       //set the recipient adress and the specific service
-      $mail->addAddress('berior14@gmail.com', $_POST['contact_choice']);
-      //set the message
+      // $mail->addAddress('berior14@gmail.com', $_POST['contact_choice']);
+
+      //Mise en place du message (type HTML)
       $mail->Body = $sanmessage;
-      //check if reply type is chosen
-      if(isset($_POST['reply_type'])) {
-        $log['format'] = $_POST['reply_type'];
+      //check du type de format de la réponse
+      if(isset($_POST['formatRep'])) {
+        $log['format'] = $_POST['formatRep'];
       }
+
+      // à partir d'ici il faut vérier, j'ai du mal à comprendre, mais c'est le filtre de l'image uploader je pense
       if ($handle->uploaded) {
         if ($handle->file_src_name_ext === 'png' || $handle->file_src_name_ext === 'jpg' || $handle->file_src_name_ext === 'jpeg' || $handle->file_src_name_ext === 'gif') {
+          // présence d'un fichier ./uploads, mais je le trouve pas dans le repos de guigui donc c'est bizarre
           $handle->process('./uploads');
           if ($handle->processed) {
             $id = 'errorUpload';
@@ -118,12 +124,16 @@ if (isset($_POST['envoi'])) {
       if (!$mail->send()) {
           echo "Mailer Error: " . $mail->ErrorInfo;
       } else {
-          echo "Message sent!";
+          echo "Message envoyé !";
       }
       echo '<pre>';
       // var_dump($log);
       $toput = json_encode($log, true) . ',';
-      file_put_contents('./logs/logs.txt', $toput, FILE_APPEND);
+      // ./logs/logs.txt se trouve dans un document nom" logs.
+      // je sais pas si c'est nécessaire de mettre ça dans un Document
+      // Je pense que ça crée un fichier json et que ça inscrit dedans les données de l'utilisateur (sans être sûr)
+      // Dans le doute j'ai créer un fichier loginUtilisateur.txt
+      file_put_contents('loginUtilisateur.txt', $toput, FILE_APPEND);
       unset($_POST, $mail, $log, $toput);
       echo '</pre>';
     }
