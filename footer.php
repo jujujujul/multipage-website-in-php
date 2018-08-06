@@ -14,7 +14,7 @@
                         10:30h -18h</p>
                         <p class="align-middle">Vous pouvez aussi remplir le formulaire<br></p>
                         <div>
-                             <button type="button" class="align-middle btn btn-outline-warning"><a id=btn href="formulairebootstrap.php">  Formulaire de contact </a> </button>
+                             <button type="button" class="align-middle btn btn-outline-warning"><a id=btn href="formulaire.php">  Formulaire de contact </a> </button>
                         </div>
                     
                     </div>

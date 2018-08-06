@@ -26,7 +26,7 @@
 <hr color="yellow">   
 
 
-<form  action="" method="post" id="form">
+<form  action="function.php" method="post" id="form">
 
       <div class="form-group">
 <div class="container">
