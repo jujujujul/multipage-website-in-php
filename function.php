@@ -137,14 +137,21 @@
 //  }
 //}
 
-  if($_POST){
- $nom =  $_POST['nom'] ;
+if($_POST){
+ $nom =  $_POST['nom'];
  $mail =  $_POST['email'] ;
  $objet =  $_POST['object'] ;
  $message = $_POST['message'] ;
  $document = $_POST['file'] ;
- $formatRep =  $_POST['format'] ;
-  }
+ $formatRep =  $_POST['formatRep'] ;
+    
+    echo $nom . '<br>';
+    echo $mail . '<br>';
+    echo $objet . '<br>';
+    echo $message . '<br>';
+    echo document . '<br>';
+    echo $formatRep . '<br>';
+}
 
  // Filtrage des données
  function verif_formulaire(){
@@ -191,22 +198,21 @@ $mail->Username = "jujubidoubidou@gmail.com";
 //Password to use for SMTP authentication
 $mail->Password = "jujubidoubidoubi";
 //Set who the message is to be sent from
-$mail->setFrom('from@example.com', 'Ju Bi');
+$mail->setFrom('', 'Ju Bi');
 //Set an alternative reply-to address
-$mail->addReplyTo('replyto@example.com', 'Ju Bi');
+$mail->addReplyTo('jujubidoubidou@gmail.com', 'Les petits riens');
 //Set who the message is to be sent to
 $mail->addAddress('jujubidoubidou@gmail.com', 'Lespetitesrien');
 //Set the subject line
 $mail->Subject = 'PHPMailer GMail SMTP test';
-////Read an HTML message body from an external file, convert referenced images to embedded,
-////convert HTML into a basic plain-text alternative body
-//$mail->msgHTML(file_get_contents('contents.html'), __DIR__);
-////Replace the plain text body with one created manually
-//$mail->AltBody = 'This is a plain-text message body';
-////Attach an image file
+//Read an HTML message body from an external file, convert referenced images to embedded,
+//convert HTML into a basic plain-text alternative body
+$mail->Body = 'This is the html message';
+//Replace the plain text body with one created manually
+$mail->AltBody = 'This is a plain-text message body';
+//Attach an image file
 
 
-$mail->Body = 'your message';
 
 
 

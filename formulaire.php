@@ -39,7 +39,7 @@
                         <div class="form-group">
                             <label name="nom">
                                 Nom et prénom</label>
-                            <input type="text" class="form-control" id="nom" placeholder="Enter name" required="required" />
+                            <input name= type="text" class="form-control" id="nom" placeholder="Enter name" required="required" />
                         </div>
                         <div class="form-group">
                             <label for="email">
