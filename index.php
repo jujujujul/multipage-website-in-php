@@ -6,11 +6,12 @@
 <html>
 	<head>
 		<title>Les Petits Rien</title>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-       	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" />
         <link rel="stylesheet" href="style.css" />
         <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+      
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css?family=Anton|Lobster" rel="stylesheet">
@@ -41,7 +42,7 @@
                     
                     </div>
 
-                    <div class="col-6 text-justify ">
+                    <div class="col-6 text-justify" class="queries">
                 
                     <h2>Comment nous aider ? Soutenez notre action </h2>
 
@@ -63,8 +64,8 @@
 			</div>
 	    	
 		
-         	<section class="container">
-                <div class="row">
+         	<section class="container" >
+                <div class="row queries">
                    
                     <div class="col-sm-6 text-right mb-5" > 
                         <h2 class="byhand"> Maison d’Accueil <br> pour sans-abri </h2>
@@ -72,8 +73,7 @@
                         <p><i class="far fa-address-book"></i>
                         Brigitte Buyssens –  Directrice<br>
                         Rue du Prévôt 30-32 | 1050 Bruxelles<br>
-                        Tél. : 02/541.13.97 |                        <hr color="yellow"> 
- Fax : 02/534.09.77</p>
+                        Tél. : 02/541.13.97 | Fax : 02/534.09.77</p>
                     </div>
                     
                     <div class=" col-sm-6">

@@ -6,8 +6,8 @@
                   </button>
                   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                      <a class="nav-item nav-link active" href="#">Contacts <span class="sr-only">(current)</span></a>
-                      <a class="nav-item nav-link" href="#">Newsletter</a>
+                      <a class="nav-item nav-link active" href="#footer">Contacts <span class="sr-only">(current)</span></a>
+                      <a class="nav-item nav-link" href="agir.php">Dons</a>
                       <a class="nav-item nav-link" href="https://www.petitsriens.be/wp-content/uploads/2015/03/Charte-FR.jpg">La Charte </a>
                     </div>
                   </div>

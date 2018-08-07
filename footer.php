@@ -1,10 +1,10 @@
      <footer>  
-           <container class="container mt-5">
+           <container class="container mt-5" id="footer">
                <div class="row">
                    
                     <div class="col-md-6  bidou">.</div>
                     
-                    <div class="col-md-5 align-self-center text-center justify-center"> 
+                    <div class=" col-md-5 align-self-center text-center justify-center"> 
                       
                     
                         <h3 class="footerright align-middle"> CONTACT</h3>
