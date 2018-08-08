@@ -1,0 +1,153 @@
+main {
+  color: dimgrey;
+}
+
+a:hover {
+  font-size: 30px;
+}
+
+a.link:visited {
+  color: #FFD700;
+}
+
+a:visited {
+  color: gray;
+}
+
+a.rotatou:hover {
+  font-size: 30px;
+  background: -webkit-linear-gradient(#ff5000, #0055ff, #00ff55, #FFFF00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.introtop {
+  font-size: 30px;
+  font-family: 'Anton', sans-serif;
+  margin: 1% 20%;
+  text-indent: 40px;
+  text-align: justify;
+}
+
+.btn {
+  background-color: #8d12a5;
+}
+
+#middle {
+  font-size: 40px;
+  text-align: center;
+  color: #FFD700;
+  font-family: 'Anton', sans-serif;
+  margin: 10%;
+}
+
+.bouton {
+  color: yellow;
+  font-size: 20px;
+  margin: 10%;
+  text-align: center;
+}
+
+.rotate {
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  margin-left: 20%;
+  font-size: 30px;
+  margin-bottom: 10%;
+}
+
+.title {
+  font-family: 'Lobster', cursive;
+}
+
+.roudou {
+  background-image: url(img/background.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 80vw;
+  height: 50vw;
+  margin: auto;
+}
+
+.byhand {
+  font-family: 'Homemade Apple', cursive;
+  color: black;
+  font-size: 50px;
+}
+
+.bidou {
+  background-image: url("img/background2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 90%;
+  min-height: 500px;
+}
+
+.footerright {}
+
+#bottom {
+  width: 100%;
+  text-align: right;
+}
+
+#copyright {
+  font-size: 12px;
+  color: darkgrey;
+  writing-mode: vertical-rl;
+  display: flex;
+  position: relative;
+  padding-right: 30px;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(img/background3.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.introtop2 {
+  background-color: black;
+  color: white;
+}
+
+a#btn:hover {
+  font-size: 1em;
+}
+
+a {
+  color: aliceblue;
+}
+
+.para2 {
+  padding: 30px 10%;
+  border-left: solid 10px #FFD700;
+  text-align: justify;
+  text-indent: 40px;
+}
+
+.jumbotron {
+  background: #358CCE;
+  color: #FFF;
+  border-radius: 0px;
+}
+
+.jumbotron-sm {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.jumbotron small {
+  color: #FFF;
+}
+
+.h1 small {
+  font-size: 24px;
+}
+
+@media screen and (min-width: 200px) and (max-width: 640px) {
+  .introtop {
+    font-size: 15px;
+  }
+}
