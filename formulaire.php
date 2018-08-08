@@ -3,18 +3,18 @@
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <link rel="stylesheet" href="style.css" />
 
-      
-       
+
+
 <div class="jumbotron jumbotron-sm">
     <div class="container">
-       
+
         <div class="row">
-           
+
             <div class="col-sm-12 col-lg-12">
                 <h1 class="h1">
                     Contactez nous<small><br>Feel free to contact us</small></h1>
-          
-            </div>      
+
+            </div>
          </div>
      </div>
 </div>
@@ -22,8 +22,8 @@
 <hr color="yellow">
 
 <a class="bouton" href="index.php"> <bold> Retour vers le site </bold> </a>
-      
-<hr color="yellow">   
+
+<hr color="yellow">
 
 
 <form  action="function.php" method="post" id="form">
@@ -38,8 +38,15 @@
                     <div class="col-md-7">
                         <div class="form-group">
                             <label name="nom">
-                                Nom et prénom</label>
+                                Nom</label>
                             <input name= type="text" class="form-control" id="nom" placeholder="Enter name" required="required" />
+                        </div>
+                           <div class="col-sm-4">
+                             <div class="form-group">
+                               <label class="control-label " for="genre">Genre :</label>  <br>
+                             <input type="radio" id="genre" name="genre" label="Monsieur"> M.
+                             <input type="radio" id="genre" name="genre" label="Madame"> Mme
+                           </div>
                         </div>
                         <div class="form-group">
                             <label for="email">
@@ -60,7 +67,7 @@
                                 <option value="autre">autre</option>
                             </select>
                         </div>
-                        
+
                          <div class="form-group">
                             <label class="control-label " for="formatRep">Format de la réponse souhaitée :</label>
                             <div class="col-sm-6">
@@ -68,6 +75,7 @@
                               <input type="radio" id="formatRep" name="formatRep" label="Text"> Text
                             </div>
                          </div>
+
                          &nbsp
                          <div class="form-group">
                             <label class="control-label " for="document"></label>
@@ -76,7 +84,13 @@
                             </div>
                           </div>
                     </div>
-                    
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label name="prenom">
+                                Prénom</label>
+                            <input name= type="text" class="form-control" id="prenom" placeholder="Enter firstname" required="required" />
+                        </div>
+                      </div>
                     <div class="col-md-5">
                         <div class="form-group">
                             <label for="name">
@@ -102,7 +116,7 @@
                 02 537 30 26<br>
                 Ouvert du lundi au samedi
             </address>
-           
+
             </form>
         </div>
     </div>
