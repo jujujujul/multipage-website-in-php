@@ -1,72 +1,65 @@
 <?php
-ini_set('display_errors', 1);
-error_reporting(E_ALL ^ E_NOTICE);
+// ini_set('display_errors', 1);
+// error_reporting(E_ALL ^ E_NOTICE);
+
+    // Import PHPMailer classes into the global namespace
+    // These must be at the top of your script, not inside a function
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
+
+    //Load Composer's autoloader
+    require 'vendor/autoload.php';
+
+    $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
+    try {
+      // initiation + filter of variables
+      $nom =  $_POST['nom'];
+      $prenom = $_POST['prenom'];
+      $email =  $_POST['email'] ;
+      $objet =  $_POST['object'] ;
+      $message = $_POST['message'] ;
+      // $document = $_POST['file'] ;
+      $formatRep =  $_POST['formatRep'];
+
+      $nom_san = filter_var($nom, FILTER_SANITIZE_STRING);
+      $prenom_san = filter_var($prenom, FILTER_SANITIZE_STRING).
+      $email_san = filter_var($email, FILTER_SANITIZE_EMAIL);
+      $message_san = filter_var($message, FILTER_SANITIZE_STRING);
+      $email_valid = filter_var($email_san, FILTER_VALIDATE_EMAIL);
 
 
+        //Server settings
+        $mail->SMTPDebug = 2;                                 // Enable verbose debug output
+        $mail->isSMTP();                                      // Set mailer to use SMTP
+        $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPAuth = true;                               // Enable SMTP authentication
+        $mail->Username = 'jujubidoubidou@gmail.com';                 // SMTP username
+        $mail->Password = 'jujubidoubidoubi';                           // SMTP password
+        $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+        $mail->Port = 587;                                    // TCP port to connect to
 
-//Import PHPMailer classes into the global namespace
-use PHPMailer\PHPMailer\PHPMailer;
-require '../vendor/autoload.php';
-$mail = new PHPMailer;
+        //Recipients
+        $mail->setFrom($email_valid, $prenom_san);
+        $mail->addAddress('jujubidoubidou@gmail.com');               // Name is optional
+        // $mail->addCC('cc@example.com');
+        // $mail->addBCC('bcc@example.com');
 
+        //Attachments
+        // $mail->addAttachment($document);                          // Add attachments
+        // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 
-  if (isset($_POST['submit'])) {
+        //Content
+        $mail->isHTML(true);                                  // Set email format to HTML
+        $mail->Subject = $object;
+        $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+        $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
-    //Create a new PHPMailer instance
-    //Tell PHPMailer to use SMTP
-    $mail->isSMTP();
-    //Enable SMTP debugging
-    // 0 = off (for production use)
-    // 1 = client messages
-    // 2 = client and server messages
-    $mail->SMTPDebug = 2;
-    //Set the hostname of the mail server
-    $mail->Host = 'smtp.gmail.com';
-    // use
-    // $mail->Host = gethostbyname('smtp.gmail.com');
-    // if your network does not support SMTP over IPv6
-    //Set the SMTP port number - 587 for authenticated TLS, a.k.a. RFC4409 SMTP submission
-    $mail->Port = 587;
-    //Set the encryption system to use - ssl (deprecated) or tls
-    $mail->SMTPSecure = 'tls';
-    //Whether to use SMTP authentication
-    $mail->SMTPAuth = true;
-    //Username to use for SMTP authentication - use full email address for gmail
-    $mail->Username = "jujubidoubidou@gmail.com";
-    //Password to use for SMTP authentication
-    $mail->Password = "jujubidoubidoubi";
-
-    //Set who the message is to be sent from
-    $mail->setFrom('jujubidoubidou@gmail.com', 'Juju et Alex');
-
-
-    $email =  $_POST['email'] ;
-    $prenom = $_POST['prenom'];
-    //Set who the message is to be sent to
-    $mail->addAddress($email, $prenom );
-    //Set the subject line
-    $mail->Subject = 'PHPMailer GMail SMTP test';
-    //Read an HTML message body from an external file, convert referenced images to embedded,
-    //convert HTML into a basic plain-text alternative body
-    $mail->msgHTML(file_get_contents('contents.html'), __DIR__);
-    //Replace the plain text body with one created manually
-    $mail->AltBody = 'This is a plain-text message body';
-    //Attach an image file
-    $mail->addAttachment('images/phpmailer_mini.png');
-    //send the message, check for errors
-    if (!$mail->send()) {
-        echo "Mailer Error: " . $mail->ErrorInfo;
-    } else {
-        echo "Message sent!";
-        //Section 2: IMAP
-        //Uncomment these to save your message in the 'Sent Mail' folder.
-        #if (save_mail($mail)) {
-        #    echo "Message saved!";
-        #}
+        $mail->send();
+        echo 'Message has been sent';
+    } catch (Exception $e) {
+        echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
     }
 
-
-  }
 
 
 

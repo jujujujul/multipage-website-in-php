@@ -5,6 +5,35 @@
 
 
 
+<form class="" action="function.php" method="post">
+  <input type="radio" name="gender" value="M."> Monsieur
+  <input type="radio" name="gender" value="Mme.">Madame
+  <br>
+  <input type="text" name="nom" value="name">
+  <input type="text" name="prenom" value="firstname">
+  <br>
+  <input type="email" name="email" value="mail">
+  <br>
+  <select id="objet" name="object" class="form-control" required="required">
+              <option value="na" selected="">Choississez:</option>
+              <option value="service">Plainte Service</option>
+              <option value="suggestions">Suggestions</option>
+              <option value="technique">Question technique</option>
+              <option value="autre">autre</option>
+          </select>
+  <br>
+  <!-- <input type="file" name="file" value="fichier"> -->
+  <br>
+  <input type="radio" name="formatRep" value="HTML"> html<br>
+  <input type="radio" name="formatRep" value="text"> texte
+  <br>
+  <input type="text" name="message" value="message">
+  <input type="submit" name="submit" value="send">
+</form>
+
+
+
+<!--
 <div class="jumbotron jumbotron-sm">
   <div class="container">
 
@@ -28,7 +57,6 @@
 <hr color="yellow">
 
 
-<form>
 
   <div class="form-group">
     <div class="container">
@@ -131,4 +159,4 @@
 
     <div class="text-center align-items-center">
       <img class="rounded mx-auto d-block" src="img/logo.png" alt="">
-    </div>
+    </div>  -->
