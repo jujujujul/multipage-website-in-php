@@ -5,7 +5,7 @@
 
 
 
-<form class="" action="function.php" method="post">
+<form class="" enctype="multipart/form-data" action="function.php" method="post">
   <input type="radio" name="gender" value="M."> Monsieur
   <input type="radio" name="gender" value="Mme.">Madame
   <br>
@@ -22,7 +22,7 @@
               <option value="autre">autre</option>
           </select>
   <br>
-  <!-- <input type="file" name="file" value="fichier"> -->
+  <input type="file" size="32" name="file" value="fichier">
   <br>
   <input type="radio" name="formatRep" value="HTML"> html<br>
   <input type="radio" name="formatRep" value="text"> texte
