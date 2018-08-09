@@ -14,7 +14,7 @@
   <br>
   <input type="email" name="email" value="mail">
   <br>
-  <select id="objet" name="object" class="form-control" required="required">
+  <select id="object" name="object" class="form-control" required="required">
               <option value="na" selected="">Choississez:</option>
               <option value="service">Plainte Service</option>
               <option value="suggestions">Suggestions</option>
@@ -22,7 +22,7 @@
               <option value="autre">autre</option>
           </select>
   <br>
-  <input type="file" size="32" name="file" value="fichier">
+  <input type="file" size="32" name="file" value="fichier" id="upload">
   <br>
   <input type="radio" name="formatRep" value="HTML"> html<br>
   <input type="radio" name="formatRep" value="text"> texte
