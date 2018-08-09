@@ -5,7 +5,7 @@
 
 
 
-<form class="" enctype="multipart/form-data" action="function.php" method="post">
+<!-- <form class="" enctype="multipart/form-data" action="function.php" method="post">
   <input type="radio" name="gender" value="M."> Monsieur
   <input type="radio" name="gender" value="Mme.">Madame
   <br>
@@ -29,11 +29,11 @@
   <br>
   <input type="text" name="message" value="message">
   <input type="submit" name="submit" value="send">
-</form>
+</form> -->
 
 
 
-<!--
+
 <div class="jumbotron jumbotron-sm">
   <div class="container">
 
@@ -58,24 +58,23 @@
 
 
 
-  <div class="form-group">
     <div class="container">
       <div class="row">
         <div class="col-md-8">
           <div class="well well-sm">
-            <form action="function.php" method="post" id="form">
+           <form class="" enctype="multipart/form-data" action="function.php" method="post">
               <div class="row">
                 <div class="col-md-7">
                   <div class="form-group">
                     <label name="nom">
                                 Nom</label>
-                    <input name=t ype="text" class="form-control" id="nom" placeholder="Enter name" required="required" />
+                                <input type="text" name="nom" value="name">
                   </div>
                   <div class="col-sm-4">
                     <div class="form-group">
                       <label class="control-label " for="genre">Genre :</label> <br>
-                      <input type="radio" id="genre" name="genre" label="Monsieur"> M.
-                      <input type="radio" id="genre" name="genre" label="Madame"> Mme
+                      <input type="radio" name="gender" value="M."> Monsieur
+                      <input type="radio" name="gender" value="Mme.">Madame
                     </div>
                   </div>
                   <div class="form-group">
@@ -84,25 +83,25 @@
                     <div class="input-group">
                       <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
                       </span>
-                      <input type="email" name="email" class="form-control" id="email" placeholder="Enter email" required="required" /></div>
+                      <input type="email" name="email" value="mail">
                   </div>
                   <div class="form-group">
                     <label for="subject">
                                 Raison</label>
-                    <select id="objet" name="object" class="form-control" required="required">
-                                <option value="na" selected="">Choississez:</option>
-                                <option value="service">Plainte Service</option>
-                                <option value="suggestions">Suggestions</option>
-                                <option value="technique">Question technique</option>
-                                <option value="autre">autre</option>
-                            </select>
+                                <select id="object" name="object" class="form-control" required="required">
+                                            <option value="na" selected="">Choississez:</option>
+                                            <option value="service">Plainte Service</option>
+                                            <option value="suggestions">Suggestions</option>
+                                            <option value="technique">Question technique</option>
+                                            <option value="autre">autre</option>
+                                        </select>
                   </div>
 
                   <div class="form-group">
                     <label class="control-label " for="formatRep">Format de la réponse souhaitée :</label>
                     <div class="col-sm-6">
-                      <input type="radio" id="formatRep" name="formatRep" label="HTML"> HTML
-                      <input type="radio" id="formatRep" name="formatRep" label="Text"> Text
+                      <input type="radio" name="formatRep" value="HTML"> html<br>
+                      <input type="radio" name="formatRep" value="text"> texte
                     </div>
                   </div>
 
@@ -110,7 +109,7 @@
                   <div class="form-group">
                     <label class="control-label " for="document"></label>
                     <div>
-                      <input type="file" id="document" name="file" value="">
+                      <input type="file" size="32" name="file" value="fichier" id="upload">
                     </div>
                   </div>
                 </div>
@@ -118,18 +117,18 @@
                   <div class="form-group">
                     <label name="prenom">
                                 Prénom</label>
-                    <input name=t ype="text" class="form-control" id="prenom" placeholder="Enter firstname" required="required" />
+                                <input type="text" name="prenom" value="firstname">
                   </div>
                 </div>
                 <div class="col-md-5">
                   <div class="form-group">
                     <label for="name">
                                 Message</label>
-                    <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required" placeholder="Message"></textarea>
+                                <input type="text" name="message" value="message">
                   </div>
                 </div>
                 <div class="col-md-12">
-                  <button type="submit" name="submit" class="btn btn-primary pull-right" id="btnContactUs">
+                  <input type="submit" name="submit" value="send">
                             ENVOYER</button>
                 </div>
               </div>
@@ -137,8 +136,7 @@
           </div>
         </div>
         <div class="col-md-4 align-self-center text-center justify-center">
-          <form>
-            <legend><span class="glyphicon glyphicon-globe align-middle"></span> Notre maison mère</legend>
+            <legend><span class="glyphicon glyphicon-globe align-middle"></span> Notre maison mère</legend>
             <address class="align-middle">
                 <strong>Les petits riens</strong><br>
                 Rue américaine 101 - IXELLES 1050<br>
@@ -146,7 +144,6 @@
                 Ouvert du lundi au samedi
             </address>
 
-          </form>
         </div>
       </div>
     </div>
@@ -158,5 +155,5 @@
     </a>
 
     <div class="text-center align-items-center">
-      <img class="rounded mx-auto d-block" src="img/logo.png" alt="">
-    </div>  -->
+      <img class="rounded mx-auto d-block" src="logo.png" alt="">
+    </div>
