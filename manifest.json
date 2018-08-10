@@ -1,0 +1,22 @@
+
+{
+  "short_name": "multipage-website-in-php",
+  "name": "multipage-website-in-php",
+  "icons": [
+    {
+      "src": "img/lougou192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "img/icon512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/multipage-website-in-php/index.php",
+  "background_color": "#3367D6",
+  "display": "standalone",
+  "scope": "/multipage-website-in-php/",
+  "theme_color": "#3367D6"
+}

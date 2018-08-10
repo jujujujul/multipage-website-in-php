@@ -73,7 +73,7 @@
                   <div class="col-sm-4">
                     <div class="form-group">
                       <label class="control-label " for="genre">Genre :</label> <br>
-                      <input type="radio" name="gender" value="M."> Monsieur
+                      <input type="radio" name="gender" value="M."> Monsieur <br>
                       <input type="radio" name="gender" value="Mme.">Madame
                     </div>
                   </div>
@@ -87,7 +87,7 @@
                   </div>
                   <div class="form-group">
                     <label for="subject">
-                                Raison</label>
+                                <br> Raison</label>
                                 <select id="object" name="object" class="form-control" required="required">
                                             <option value="na" selected="">Choississez:</option>
                                             <option value="service">Plainte Service</option>
@@ -135,16 +135,15 @@
             </form>
           </div>
         </div>
-        <div class="col-md-4 align-self-center text-center justify-center">
-            <legend><span class="glyphicon glyphicon-globe align-middle"></span> Notre maison mère</legend>
-            <address class="align-middle">
-                <strong>Les petits riens</strong><br>
-                Rue américaine 101 - IXELLES 1050<br>
-                02 537 30 26<br>
-                Ouvert du lundi au samedi
-            </address>
-
-        </div>
+      </div>
+      <div class="col-md-4 align-self-center text-center justify-content-center">
+          <legend><span class="glyphicon glyphicon-globe align-middle"></span> Notre maison mère</legend>
+          <address class="align-middle">
+              <strong>Les petits riens</strong><br>
+              Rue américaine 101 - IXELLES 1050<br>
+              02 537 30 26<br>
+              Ouvert du lundi au samedi
+          </address>
       </div>
     </div>
 
